@@ -1,0 +1,7 @@
+  body {
+    background-image: url('../images/backgrounds/bg-612x612.jpg');
+    background-size: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: 40%;
+  }
