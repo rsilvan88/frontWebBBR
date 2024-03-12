@@ -56,11 +56,13 @@ export const loginUser = (credentials) => async (dispatch) => {
   dispatch(loginStart());
   try {
     const response = await fetch(`${backendUrl}/auth`, {
-      mode: 'no-cors',
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "accept":"*/*"
+        "accept":"*/*",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers":"Origin, X-Requested-With, Content-Type, Accept"
+        
       },
       body: JSON.stringify(credentials),
     });
